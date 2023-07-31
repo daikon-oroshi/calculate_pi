@@ -1,0 +1,14 @@
+version: "3"
+services:
+  jupyter:
+    image: jupyter/datascience-notebook
+    user: root
+    ports:
+      - '8889:8888'
+    environment:
+      - GRANT_SUDO=yes
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./work:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.password='sha1:a835d19f3481:0b13321f42300b99206a36c4eaa1dd26bbbf131a'
+
