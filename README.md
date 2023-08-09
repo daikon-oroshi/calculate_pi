@@ -8,15 +8,19 @@ https://www.youtube.com/@culculate-pi-200/channels
 
 ## 動かし方
 
-1. docker をインストールする https://docs.docker.com/engine/install/
+ローカルPCでサンプルプログラムを実行したい場合は以下の手順を実行してください。
 
-2. docker-compose をインストールする https://matsuand.github.io/docs.docker.jp.onthefly/compose/install/
+1. git clone する
 
-3. 以下のコマンドを実行する
+2. docker をインストールする https://docs.docker.com/engine/install/
+
+3. docker-compose をインストールする https://matsuand.github.io/docs.docker.jp.onthefly/compose/install/
+
+4. 以下のコマンドを実行する
 ```
 docker-compose up -d
 ```
 
-4. http://localhost:8889 にアクセスする
+5. http://localhost:8889 にアクセスする
 
-5. パスワードは password
+6. パスワードは password
