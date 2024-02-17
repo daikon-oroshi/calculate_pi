@@ -1,2 +1,4 @@
 work/*
+work/**/.ipynb_checkpoints/*
+!work/**/
 !work/*.ipynb
