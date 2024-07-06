@@ -26,14 +26,23 @@ def print_pi(pi: float, pi_true: str, digits: int, _format: str = None):
     
     pi_str = mpmath.nstr(pi, digits, strip_zeros=False)
     
-    def match_nod(pi_str: str) -> int:
-        for i in range(0, min(len(pi_str), len(pi_true))):
-            if pi_str[i] != pi_true[i]:
-                break
-        return i 
-    
-    nod = match_nod(pi_str)
-    colored_pi = f"\033[31m{pi_str[0:nod]}\033[0m{pi_str[nod:]}"
+    noc = match_char(pi_str, pi_true)
+    colored_pi = _colored(pi_str, noc)
     mdigit = max(0, nod -2)
     
     print(_format.format(pi=colored_pi, mdigit=mdigit))
+    
+def match_char(pi_str: str, pi_true: str) -> int:
+    """match number of charcters"""
+    for i in range(0, min(len(pi_str), len(pi_true))):
+        if pi_str[i] != pi_true[i]:
+            break
+    return i 
+
+def _colored(pi_str: str, char_no) -> str:
+    return f"\033[31m{pi_str[0:char_no]}\033[0m{pi_str[char_no:]}"
+
+def color_pi(pi_str: float, pi_true: str) -> str:
+    noc = match_char(pi_str, pi_true)
+    return _colored(pi_str, noc)
+    
