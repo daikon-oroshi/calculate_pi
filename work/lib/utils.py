@@ -28,7 +28,7 @@ def print_pi(pi: float, pi_true: str, digits: int, _format: str = None):
     
     noc = match_char(pi_str, pi_true)
     colored_pi = _colored(pi_str, noc)
-    mdigit = max(0, nod -2)
+    mdigit = max(0, noc -2)
     
     print(_format.format(pi=colored_pi, mdigit=mdigit))
     
