@@ -18,7 +18,7 @@ https://www.youtube.com/@culculate-pi-200/channels
 
 4. 以下のコマンドを実行する
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 5. http://localhost:8889 にアクセスする
